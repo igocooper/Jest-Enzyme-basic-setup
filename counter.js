@@ -2,19 +2,29 @@ import React, { Component } from 'react'
 
 export class Counter extends Component {
 
-    constructor(props){
-        super(props);
-        this.increment = this.increment.bind(this);
+    // constructor(props){
+    //     super(props);
+    //     this.increment = this.increment.bind(this);
         
-        this.state = {
-            count: 0,
-        }
-    }
+    //     this.state = {
+    //         count: 0,
+    //     }
+    // }
 
-    increment(prevState) {
-    this.setState({
-        count: prevState.count + 1
-    });
+    // increment(prevState) {
+    // this.setState({
+    //     count: prevState.count + 1
+    // });
+    // };
+
+    state = {
+        count: 0,
+    };
+
+    increment = (prevState) => {
+        this.setState({
+            count: prevState.count + 1
+        });
     };
 
     render() {
