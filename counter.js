@@ -21,8 +21,8 @@ export class Counter extends Component {
     return (
         <div>
         <p>Current count: {this.state.count}</p>
-        <button onClick={this.increment} className='increment'>Increment count</button>
-        <button onClick={this.decrement} className='decrement'>Decrement count</button>
+        <button onClick={this.increment} className='increment'>+++</button>
+        <button onClick={this.decrement} className='decrement'>---</button>
         </div>
     )
     }
