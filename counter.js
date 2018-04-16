@@ -6,21 +6,16 @@ export class Counter extends Component {
         count: 0,
     };
 
-    increment = () => {
+    makeIncrementer = ( amount ) => () => {
         this.setState( (prevState) => {
-           return {
-                count: prevState.count + 1
-            }
-        });
-    };
+            return {
+                 count: prevState.count + amount
+             }
+         });
+    }
 
-    decrement = () => {
-        this.setState( (prevState) => {
-           return {
-                count: prevState.count - 1
-            }
-        });
-    };
+    increment = this.makeIncrementer(1);
+    decrement = this.makeIncrementer(-1);
 
     render() {
     return (
